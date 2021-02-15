@@ -10,6 +10,7 @@
 1. [Optional] Activate virtual environment:     
     1.1 MacOS/Linux: `source venv/bin/activate`   
     1.2 Windows: `source venv/Scripts/activate`     
+1. After activating the virtual environment, make sure you have the latest pip installed `pip install --upgrade pip`
 
 ## Install the Solace Python API
 1. Install the API `pip install solace-pubsubplus`
@@ -29,10 +30,9 @@ To pass non default parameters, do so via the environment variables
 1. Solace hostname, username, message vpn, and password are obtained from your Solace cloud account
 
 ## To-Do
-- [x] Add loop for publisher message rate
 - [ ] Add License, Authors, Contributing
-- [ ] Add `pip install solace-pubsubplus` when API is released
+
 
 ## Resources
 - Solace Developer Portal is at [solace.dev](https://solace.dev)
-- Ask the [Solace Community](https://solace.community/discussion/336/python-whos-in-for-a-real-treat) for further discussions and questions.
+- Ask the [Solace Community](https://solace.community/categories/python-api) for further discussions and questions.
