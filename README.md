@@ -28,11 +28,12 @@ To pass non default parameters, do so via the environment variables
 ## Notes:
 1. [Python Virtual environment](https://docs.python.org/3/tutorial/venv.html) is recommended to keep your project dependencies within the project scope and avoid polluting global python packages
 1. Solace hostname, username, message vpn, and password are obtained from your Solace cloud account
-
-## To-Do
-- [ ] Add License, Authors, Contributing
-
+1. Make sure you have the latest pip version installed prior installation
 
 ## Resources
 - Solace Developer Portal is at [solace.dev](https://solace.dev)
 - Ask the [Solace Community](https://solace.community/categories/python-api) for further discussions and questions.
+- Official python documentation on [https://docs.solace.com/Solace-PubSub-Messaging-APIs/Python-API/python-home.htm](https://docs.solace.com/Solace-PubSub-Messaging-APIs/Python-API/python-home.htm)
+
+## To-Do
+- [ ] Add License, Authors, Contributing
