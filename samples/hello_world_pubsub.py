@@ -2,7 +2,7 @@
 import os
 import time
 
-# Import Solace Python  API modules from the pysolace package
+# Import Solace Python  API modules
 from solace.messaging.messaging_service import MessagingService, ReconnectionListener, ReconnectionAttemptListener, ServiceInterruptionListener, RetryStrategy, ServiceEvent
 from solace.messaging.errors.pubsubplus_client_error import PubSubPlusClientError
 from solace.messaging.publisher.direct_message_publisher import PublishFailureListener
@@ -51,7 +51,6 @@ broker_props = {
     "solace.messaging.authentication.scheme.basic.username": os.environ.get('SOLACE_USERNAME') or "default",
     "solace.messaging.authentication.scheme.basic.password": os.environ.get('SOLACE_PASSWORD') or "default"
     }
-print(os.environ.get('SOLACE_HOST'));
 
 # Build A messaging service with a reconnection strategy of 20 retries over an interval of 3 seconds
 # Note: The reconnections strategy could also be configured using the broker properties object
