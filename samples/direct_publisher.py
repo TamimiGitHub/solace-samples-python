@@ -53,7 +53,7 @@ messaging_service = MessagingService.builder().from_properties(broker_props)\
 messaging_service.connect()
 print(f'Messaging Service connected? {messaging_service.is_connected}')
 
-# Event Handeling for the messaging service
+# Event Handling for the messaging service
 service_handler = ServiceEventHandler()
 messaging_service.add_reconnection_listener(service_handler)
 messaging_service.add_reconnection_attempt_listener(service_handler)

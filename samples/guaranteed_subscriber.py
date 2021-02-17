@@ -6,18 +6,21 @@
 import os
 import platform
 import time
-import threading
 
-from solace.messaging.messaging_service import MessagingService, ReconnectionListener, ReconnectionAttemptListener, ServiceInterruptionListener, RetryStrategy, ServiceEvent
+from solace.messaging.messaging_service import MessagingService, ReconnectionListener, ReconnectionAttemptListener, ServiceInterruptionListener, ServiceEvent
 from solace.messaging.resources.queue import Queue
+from solace.messaging.config.retry_strategy import RetryStrategy
 from solace.messaging.receiver.persistent_message_receiver import PersistentMessageReceiver
 from solace.messaging.receiver.message_receiver import MessageHandler, InboundMessage
 from solace.messaging.errors.pubsubplus_client_error import PubSubPlusClientError
+
+if platform.uname().system == 'Windows': os.environ["PYTHONUNBUFFERED"] = "1" # Disable stdout buffer 
 
 # Handle received messages
 class MessageHandlerImpl(MessageHandler):
     def on_message(self, message: InboundMessage):
         topic = message.get_destination_name()
+        print("\n" + f"Received message on: {topic}")
         print("\n" + f"Message dump: {message} \n")
 
 # Inner classes for error handling
@@ -55,7 +58,7 @@ messaging_service = MessagingService.builder().from_properties(broker_props)\
 messaging_service.connect()
 print(f'Messaging Service connected? {messaging_service.is_connected}')
 
-# Event Handeling for the messaging service
+# Event Handling for the messaging service
 service_handler = ServiceEventHandler()
 messaging_service.add_reconnection_listener(service_handler)
 messaging_service.add_reconnection_attempt_listener(service_handler)
@@ -80,13 +83,13 @@ try:
       while True:
           time.sleep(1)
   except KeyboardInterrupt:
-      print('\KeyboardInterrupt received')
+      print('\nKeyboardInterrupt received')
 # Handle API exception 
 except PubSubPlusClientError as exception:
   print(f'\nMake sure queue {queue_name} exists on broker!')
 
 finally:
-    if persistent_receiver.is_running():
+    if persistent_receiver and persistent_receiver.is_running():
       print('\nTerminating receiver')
       persistent_receiver.terminate(grace_period = 0)
     print('\nDisconnecting Messaging Service')
