@@ -3,7 +3,7 @@
 from solace.messaging.config.retry_strategy import RetryStrategy
 from solace.messaging.messaging_service import MessagingService
 from solace.messaging.messaging_service import ReconnectionListener, ServiceEvent, ReconnectionAttemptListener
-from solace_sampler.sampler_boot import SolaceConstants, SamplerBoot
+from sampler_boot import SolaceConstants, SamplerBoot
 
 constants = SolaceConstants
 boot = SamplerBoot()

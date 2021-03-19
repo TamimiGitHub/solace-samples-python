@@ -14,8 +14,8 @@ from solace.messaging.config.receiver_activation_passivation_configuration impor
 from solace.messaging.config.solace_properties import transport_layer_properties, service_properties, \
     authentication_properties
 from solace.messaging.receiver.message_receiver import MessageHandler
-from solace_sampler.SEMPv2.semp_client import SempClient
-from solace_sampler.SEMPv2.semp_utility import SempUtility
+from SEMPv2.semp_client import SempClient
+from SEMPv2.semp_utility import SempUtility
 
 X = TypeVar('X')
 
@@ -105,7 +105,7 @@ class SamplerBoot:
     """this class is created for instantiating the broker properties from environment"""
 
     properties_from_external_file_name = 'solbroker_properties.json'
-    external_file_full_path = os.path.join(dirname(dirname(__file__)), "solace_sampler",
+    external_file_full_path = os.path.join(dirname(dirname(__file__)), "howtos",
                                            properties_from_external_file_name)
 
     solbroker_properties_key = 'solbrokerProperties'
@@ -243,10 +243,10 @@ class SamplerUtil:
     def get_trusted_store_dir(invalid=False) -> str:
         """method to get trusted store dir"""
         if not invalid:
-            trusted_store_dir_full_path = os.path.join(dirname(dirname(__file__)), "solace_sampler", "fixtures")
+            trusted_store_dir_full_path = os.path.join(dirname(dirname(__file__)), "howtos", "fixtures")
         else:
             trusted_store_dir_full_path = os.path.join(dirname(dirname(__file__)),
-                                                       "solace_sampler", "invalid_fixtures")
+                                                       "howtos", "invalid_fixtures")
         return trusted_store_dir_full_path
 
     @staticmethod

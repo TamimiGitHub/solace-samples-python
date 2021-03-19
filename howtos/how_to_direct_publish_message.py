@@ -8,8 +8,8 @@ from solace.messaging.messaging_service import MessagingService
 from solace.messaging.resources.topic import Topic
 from solace.messaging.utils.converter import ObjectToBytes
 from solace.messaging.utils.manageable import Metric
-from solace_sampler.how_to_access_api_metrics import HowToAccessApiMetrics
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants
+from extras.how_to_access_api_metrics import HowToAccessApiMetrics
+from sampler_boot import SamplerBoot, SolaceConstants
 
 X = TypeVar('X')
 constants = SolaceConstants

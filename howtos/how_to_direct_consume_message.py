@@ -13,9 +13,9 @@ from solace.messaging.resources.topic import Topic
 from solace.messaging.resources.topic_subscription import TopicSubscription
 from solace.messaging.utils.converter import BytesToObject
 from solace.messaging.utils.manageable import Metric
-from solace_sampler.how_to_access_api_metrics import HowToAccessApiMetrics
-from solace_sampler.pubsub.how_to_direct_publish_message import HowToDirectPublishMessage
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants
+from extras.how_to_access_api_metrics import HowToAccessApiMetrics
+from how_to_direct_publish_message import HowToDirectPublishMessage
+from sampler_boot import SamplerBoot, SolaceConstants
 
 X = TypeVar('X')
 constants = SolaceConstants

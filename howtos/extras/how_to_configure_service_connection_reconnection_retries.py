@@ -6,7 +6,7 @@ from solace.messaging.config.solace_properties import transport_layer_properties
 from solace.messaging.errors.pubsubplus_client_error import PubSubPlusClientError
 from solace.messaging.messaging_service import MessagingService
 from solace.messaging.resources.topic import Topic
-from solace_sampler.sampler_boot import SolaceConstants, SamplerBoot, SamplerUtil
+from sampler_boot import SolaceConstants, SamplerBoot, SamplerUtil
 
 constants = SolaceConstants
 boot = SamplerBoot()

@@ -4,7 +4,7 @@ import os
 from os.path import dirname
 from solace.messaging.config.transport_security_strategy import TLS
 from solace.messaging.messaging_service import MessagingService
-from solace_sampler.sampler_boot import SamplerUtil
+from sampler_boot import SamplerUtil
 
 CONFIG_INI_FILE_NAME = "config.ini"
 
@@ -12,7 +12,7 @@ CONFIG_INI_FILE_NAME = "config.ini"
 def config_parser():
     """method used to parse the config properties from the config.ini"""
     config = configparser.ConfigParser()
-    config.read(os.path.join(dirname(dirname(__file__)), "solace_sampler", CONFIG_INI_FILE_NAME))
+    config.read(os.path.join(dirname(dirname(__file__)), CONFIG_INI_FILE_NAME))
     config_parser_dict = {s: dict(config.items(s)) for s in config.sections()}
     if 'solace_properties_template' not in config_parser_dict:
         raise Exception('Unable to locate "solace_properties_template" broker properties in config.ini')

@@ -10,9 +10,9 @@ from solace.messaging.receiver.inbound_message import InboundMessage
 from solace.messaging.receiver.message_receiver import MessageHandler
 from solace.messaging.resources.topic_subscription import TopicSubscription
 from solace.messaging.utils.converter import BytesToObject
-from solace_sampler.pubsub.how_to_direct_publish_business_obj import \
+from how_to_direct_publish_business_obj import \
     HowToDirectMessagePublishBusinessObject
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants, MyData
+from sampler_boot import SamplerBoot, SolaceConstants, MyData
 
 X = TypeVar('X')
 constants = SolaceConstants

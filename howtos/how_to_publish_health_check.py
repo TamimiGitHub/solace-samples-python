@@ -5,7 +5,7 @@ from solace.messaging.errors.pubsubplus_client_error import PublisherOverflowErr
 from solace.messaging.messaging_service import MessagingService
 from solace.messaging.publisher.publisher_health_check import PublisherReadinessListener
 from solace.messaging.resources.topic import Topic
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants, SamplerUtil
+from sampler_boot import SamplerBoot, SolaceConstants, SamplerUtil
 
 X = TypeVar('X')
 constants = SolaceConstants

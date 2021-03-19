@@ -5,7 +5,7 @@ from solace.messaging.config.authentication_strategy import BasicUserNamePasswor
 from solace.messaging.config.solace_properties import authentication_properties
 from solace.messaging.config.transport_security_strategy import TLS
 from solace.messaging.messaging_service import MessagingService
-from solace_sampler.sampler_boot import SamplerBoot, SamplerUtil, SolaceConstants
+from sampler_boot import SamplerBoot, SamplerUtil, SolaceConstants
 
 boot = SamplerBoot()
 

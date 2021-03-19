@@ -2,7 +2,7 @@
 import urllib
 from pathlib import Path
 
-from solace_sampler.SEMPv2.semp_endpoint import certificate_authority_endpoint, \
+from SEMPv2.semp_endpoint import certificate_authority_endpoint, \
     update_msg_vpn_endpoint, message_vpn_authentication_endpoint, \
     patch_client_user_name_endpoint, get_client_connection_objects, get_client_connection_properties, \
     create_msg_vpn_user_endpoint, \

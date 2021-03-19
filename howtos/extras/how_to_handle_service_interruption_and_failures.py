@@ -3,7 +3,7 @@
 from solace.messaging.messaging_service import MessagingService, ServiceInterruptionListener, ServiceEvent
 from solace.messaging.publisher.direct_message_publisher import PublishFailureListener
 from solace.messaging.resources.topic import Topic
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants
+from sampler_boot import SamplerBoot, SolaceConstants
 
 constants = SolaceConstants
 boot = SamplerBoot()

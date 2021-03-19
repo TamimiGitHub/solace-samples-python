@@ -9,10 +9,10 @@ from solace.messaging.receiver.persistent_message_receiver import PersistentMess
 from solace.messaging.resources.queue import Queue
 from solace.messaging.resources.topic import Topic
 from solace.messaging.resources.topic_subscription import TopicSubscription
-from solace_sampler.pubsub.how_to_consume_persistent_message import HowToConsumeMessageExclusiveVsSharedMode
-from solace_sampler.pubsub.how_to_publish_persistent_message import HowToPublishPersistentMessage
-from solace_sampler.sampler_boot import SolaceConstants, SamplerBoot, BasicTestMessageHandler
-from solace_sampler.sampler_master import SamplerMaster
+from how_to_consume_persistent_message import HowToConsumeMessageExclusiveVsSharedMode
+from how_to_publish_persistent_message import HowToPublishPersistentMessage
+from sampler_boot import SolaceConstants, SamplerBoot, BasicTestMessageHandler
+from sampler_master import SamplerMaster
 
 X = TypeVar('X')
 constants = SolaceConstants

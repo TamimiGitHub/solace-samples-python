@@ -2,7 +2,7 @@
 
 from solace.messaging.messaging_service import MessagingService
 from solace.messaging.utils.manageable import ApiMetrics, Metric
-from solace_sampler.sampler_boot import SamplerBoot
+from sampler_boot import SamplerBoot
 
 boot = SamplerBoot()
 

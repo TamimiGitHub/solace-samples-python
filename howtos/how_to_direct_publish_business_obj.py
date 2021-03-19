@@ -4,7 +4,7 @@ import pickle
 from solace.messaging.messaging_service import MessagingService
 from solace.messaging.resources.topic import Topic
 from solace.messaging.utils.converter import ObjectToBytes
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants, MyData
+from sampler_boot import SamplerBoot, SolaceConstants, MyData
 
 constants = SolaceConstants
 boot = SamplerBoot()

@@ -12,7 +12,7 @@ from solace.messaging.publisher.persistent_message_publisher import PersistentMe
 from solace.messaging.resources.topic import Topic
 from solace.messaging.utils.converter import ObjectToBytes
 from solace.messaging.utils.manageable import Metric
-from solace_sampler.sampler_boot import SolaceConstants, SamplerBoot
+from sampler_boot import SolaceConstants, SamplerBoot
 
 X = TypeVar('X')
 constants = SolaceConstants

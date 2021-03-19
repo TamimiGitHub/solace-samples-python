@@ -3,7 +3,7 @@ from string import Template
 
 from solace.messaging.errors.pubsubplus_client_error import PubSubPlusClientError
 from solace.messaging.messaging_service import MessagingService
-from solace_sampler.sampler_boot import SamplerBoot, SolaceConstants, SamplerUtil
+from sampler_boot import SamplerBoot, SolaceConstants, SamplerUtil
 
 boot = SamplerBoot()
 constants = SolaceConstants()

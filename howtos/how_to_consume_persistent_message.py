@@ -5,20 +5,20 @@ import time
 from concurrent.futures.thread import ThreadPoolExecutor
 from typing import TypeVar
 
-from compose.const import DEFAULT_TIMEOUT
-
 from solace.messaging.config.solace_properties import service_properties
 from solace.messaging.config.solace_properties.message_properties import CORRELATION_ID, PRIORITY
 from solace.messaging.receiver.inbound_message import InboundMessage
 from solace.messaging.resources.queue import Queue
 from solace.messaging.resources.topic import Topic
 from solace.messaging.resources.topic_subscription import TopicSubscription
-from solace_sampler.SEMPv2.semp_client import SempClient
-from solace_sampler.SEMPv2.semp_utility import SempUtility
-from solace_sampler.pubsub.how_to_publish_persistent_message import HowToPublishPersistentMessage
-from solace_sampler.sampler_boot import SolaceConstants, SamplerBoot, BasicTestMessageHandler, \
+from SEMPv2.semp_client import SempClient
+from SEMPv2.semp_utility import SempUtility
+from how_to_publish_persistent_message import HowToPublishPersistentMessage
+from sampler_boot import SolaceConstants, SamplerBoot, BasicTestMessageHandler, \
     ReceiverStateChangeListenerImpl
-from solace_sampler.sampler_master import SamplerMaster
+from sampler_master import SamplerMaster
+
+DEFAULT_TIMEOUT = 5000
 
 X = TypeVar('X')
 constants = SolaceConstants
